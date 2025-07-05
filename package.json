@@ -1,0 +1,41 @@
+{
+  "name": "clean-architecture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node src/presentation/http/server.ts",
+    "dev": "nodemon --watch src --exec ts-node src/presentation/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phamhuy2905/clean-architecture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/phamhuy2905/clean-architecture/issues"
+  },
+  "homepage": "https://github.com/phamhuy2905/clean-architecture#readme",
+  "dependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.19",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "inversify": "^7.5.4",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.10",
+    "reflect-metadata": "^0.1.14",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "typescript": "^5.8.3"
+  }
+}

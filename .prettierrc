@@ -1,0 +1,10 @@
+{
+	"printWidth": 150,
+	"tabWidth": 4,
+	"useTabs": true,
+	"singleQuote": true,
+	"trailingComma": "all",
+	"arrowParens": "avoid",
+	"jsxSingleQuote": false,
+	"editor.tabSize": 4
+}
