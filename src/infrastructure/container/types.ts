@@ -13,9 +13,12 @@ export const TYPES = {
 
     // Use Cases
     RegisterUserUseCase: Symbol.for('RegisterUserUseCase'),
+    LoginUserUseCase: Symbol.for('LoginUserUseCase'),
+    GetProfileUseCase: Symbol.for('GetProfileUseCase'),
 
     // Controllers
-    CreateUserController: Symbol.for('CreateUserController'),
+    AuthController: Symbol.for('AuthController'),
+    UserController: Symbol.for('UserController'),
 
     // External Services
     Logger: Symbol.for('Logger'),

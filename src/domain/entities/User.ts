@@ -15,31 +15,10 @@ export default class User extends Base {
     }
 
     public static create(name: string, email: string, password: string): User {
-        // Validate input parameters
-        if (!name || name.trim().length === 0) {
-            throw new Error("Name is required and cannot be empty");
-        }
-
-        if (!email || email.trim().length === 0) {
-            throw new Error("Email is required and cannot be empty");
-        }
-
-        if (!this.isValidEmail(email)) {
-            throw new Error("Invalid email format");
-        }
-
-        if (!password || password.length < 6) {
-            throw new Error("Password must be at least 6 characters long");
-        }
-
         const id = uuid();
-        return new User(id, name.trim(), email.toLowerCase().trim(), password);
+        return new User(id, name.trim(), email, password);
     }
 
-    private static isValidEmail(email: string): boolean {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
 
     public getName(): string {
         return this.name;
@@ -53,8 +32,8 @@ export default class User extends Base {
         this.password = password;
     }
 
-    public comparePassword(password: string): boolean {
-        return this.password === password;
+    public getPassword(): string {
+        return this.password;
     }
 
 

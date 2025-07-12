@@ -2,6 +2,7 @@ import { Container } from 'inversify';
 import { repositoryBindings } from './bindings/repository.bindings';
 import { serviceBindings } from './bindings/service.bindings';
 import { useCaseBindings } from './bindings/use-case.bindings';
+import { controllerBindings } from './bindings/controller.bindings';
 
 /**
  * Main Dependency Injection Container
@@ -32,7 +33,8 @@ class DIContainer {
         DIContainer.instance.load(
             repositoryBindings,
             serviceBindings,
-            useCaseBindings
+            useCaseBindings,
+            controllerBindings
         );
     }
 
