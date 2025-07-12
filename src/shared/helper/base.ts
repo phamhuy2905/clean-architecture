@@ -53,3 +53,16 @@ function parseRouter(parentPath: string, childPath: string, withParams: string[]
     const fullPath = `${parentPath}.${childPath}${paramString}`;
     return fullPath;
 }
+
+
+export function bindMethods<T>(instance: T): T {
+    const proto = Object.getPrototypeOf(instance);
+    const methodNames = Object.getOwnPropertyNames(proto)
+        .filter(name => name !== 'constructor' && typeof (instance as any)[name] === 'function');
+
+    methodNames.forEach(methodName => {
+        (instance as any)[methodName] = (instance as any)[methodName].bind(instance);
+    });
+
+    return instance;
+}
